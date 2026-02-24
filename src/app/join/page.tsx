@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
 export default function JoinPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     // Load the form embed script
     const script = document.createElement("script");
@@ -22,6 +24,10 @@ export default function JoinPage() {
     };
   }, []);
 
+  const handleIframeLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <main className={styles.joinPage}>
       <div className={styles.container}>
@@ -30,12 +36,19 @@ export default function JoinPage() {
           Get access to free tools and resources to grow your real estate photography business.
         </p>
         <div className={styles.formWrapper}>
+          {isLoading && (
+            <div className={styles.loaderWrapper}>
+              <div className={styles.spinner}></div>
+              <p className={styles.loadingText}>Loading form...</p>
+            </div>
+          )}
           <iframe
             src="https://api.leadconnectorhq.com/widget/survey/kc5vZKuyPa4RW2tuxQxm"
-            style={{ border: "none", width: "100%" }}
+            style={{ border: "none", width: "100%", display: isLoading ? "none" : "block" }}
             scrolling="no"
             id="kc5vZKuyPa4RW2tuxQxm"
             title="survey"
+            onLoad={handleIframeLoad}
           />
         </div>
       </div>
