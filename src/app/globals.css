@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --electric-blue: #2962FF;
+  --growth-green: #00C853;
+  --dark-charcoal: #121417;
+  --soft-white: #F5F7FA;
+  --gray-light: #E8ECF0;
+  --text-dark: #1E1E1E;
+  --text-light: #FFFFFF;
+  --text-gray: #5A5F65;
+}
+
+@theme inline {
+  --color-electric-blue: var(--electric-blue);
+  --color-growth-green: var(--growth-green);
+  --color-dark-charcoal: var(--dark-charcoal);
+  --color-soft-white: var(--soft-white);
+  --color-gray-light: var(--gray-light);
+  --color-text-dark: var(--text-dark);
+  --color-text-light: var(--text-light);
+  --color-text-gray: var(--text-gray);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--text-dark);
+  background-color: var(--soft-white);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--electric-blue);
+  color: white;
+  box-shadow: 0 4px 6px rgba(41, 98, 255, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #1E4FD9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(41, 98, 255, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--electric-blue);
+  border: 2px solid var(--electric-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--electric-blue);
+  color: white !important;
+}
+
+.btn-cta-primary {
+  background-color: white;
+  color: var(--electric-blue);
+}
+
+.btn-cta-primary:hover {
+  background-color: var(--soft-white);
+  transform: translateY(-2px);
+}
+
+.btn-cta-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-cta-secondary:hover {
+  background-color: white;
+  color: var(--electric-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+}

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Photography Growth Lab - Get Realtor Clients on Autopilot</title>
+    <meta name="description" content="Join 500+ photographers using automated systems to get realtor clients without cold calling or expensive ads.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables - Your Brand Colors */
+        :root {
+            --electric-blue: #2962FF;
+            --growth-green: #00C853;
+            --dark-charcoal: #121417;
+            --soft-white: #F5F7FA;
+            --gray-light: #E8ECF0;
+            --text-dark: #1E1E1E;
+            --text-light: #FFFFFF;
+            --text-gray: #5A5F65;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text-dark);
+            background-color: var(--soft-white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--electric-blue);
+            color: white;
+            box-shadow: 0 4px 6px rgba(41, 98, 255, 0.25);
+        }
+        
+        .btn-primary:hover {
+            background-color: #1E4FD9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(41, 98, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--electric-blue);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--electric-blue);
+            border: 2px solid var(--electric-blue);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--electric-blue);
+            color: white;
+        }
+        
+        /* Header/Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 45px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-charcoal);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--electric-blue);
+        }
+        
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+        
+        /* Hero Section - Option B (Soft White) */
+        .hero {
+            padding: 4rem 0;
+            background-color: var(--soft-white);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(0, 200, 83, 0.1);
+            color: var(--growth-green);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-charcoal);
+        }
+        
+        .hero-subheadline {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-item i {
+            color: var(--growth-green);
+            font-size: 1.2rem;
+        }
+        
+        .hero-image {
+            background-color: var(--dark-charcoal);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .phone-mockup {
+            background-color: #1E1E1E;
+            border-radius: 30px;
+            padding: 1.5rem;
+            border: 1px solid #333;
+        }
+        
+        .sms-message {
+            background-color: var(--electric-blue);
+            padding: 1rem;
+            border-radius: 20px 20px 20px 5px;
+            max-width: 80%;
+            margin-bottom: 1rem;
+        }
+        
+        .sms-message p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .sms-reply {
+            background-color: #333;
+            padding: 1rem;
+            border-radius: 20px 20px 5px 20px;
+            max-width: 80%;
+            margin-left: auto;
+            text-align: right;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 5rem 0;
+            background-color: var(--dark-charcoal);
+            color: white;
+        }
+        
+        .problem h2 {
+            color: white;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .problem-item i {
+            color: var(--growth-green);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .problem-item p {
+            color: #CCC;
+            line-height: 1.6;
+        }
+        
+        .problem-item strong {
+            color: white;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .solution h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--soft-white);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--electric-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .step h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .step p {
+            color: var(--text-gray);
+        }
+        
+        .testimonial-quote {
+            background-color: var(--soft-white);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--growth-green);
+            max-width: 800px;
+            margin: 3rem auto 0;
+            font-style: italic;
+        }
+        
+        /* Free Tools Section */
+        .free-tools {
+            padding: 5rem 0;
+            background-color: var(--electric-blue);
+            color: white;
+        }
+        
+        .free-tools h2 {
+            color: white;
+            text-align: center;
+        }
+        
+        .free-tools-subhead {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .tool-card {
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+        
+        .tool-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .highlight-box {
+            background-color: rgba(0,0,0,0.2);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .highlight-box i {
+            color: var(--growth-green);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Community Offer Section */
+        .community {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .community h2 {
+            text-align: center;
+        }
+        
+        .community-subhead {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--text-gray);
+            font-size: 1.2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+        
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .feature-item i {
+            color: var(--growth-green);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .feature-item p {
+            color: var(--text-gray);
+        }
+        
+        .fast-start {
+            background-color: var(--soft-white);
+            padding: 2rem;
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 3rem auto 0;
+            border: 1px solid var(--gray-light);
+        }
+        
+        .fast-start h4 {
+            color: var(--electric-blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        .fast-start ol {
+            padding-left: 1.5rem;
+        }
+        
+        .fast-start li {
+            margin-bottom: 0.75rem;
+            color: var(--text-gray);
+        }
+        
+        /* Social Proof */
+        .testimonials {
+            padding: 5rem 0;
+            background-color: var(--gray-light);
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .stars {
+            color: #FFB800;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-card p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark-charcoal);
+        }
+        
+        .testimonial-location {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            max-width: 900px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid #CCC;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--electric-blue);
+        }
+        
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+        }
+        
+        .path-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+        
+        .path-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .path-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--electric-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+        
+        .milestones {
+            background-color: var(--soft-white);
+            padding: 2rem;
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+        
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .milestone {
+            font-weight: 600;
+            color: var(--electric-blue);
+        }
+        
+        .milestone small {
+            display: block;
+            color: var(--text-gray);
+            font-weight: normal;
+            margin-top: 0.5rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 5rem 0;
+            background-color: var(--electric-blue);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            color: white;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-cta-primary {
+            background-color: white;
+            color: var(--electric-blue);
+        }
+        
+        .btn-cta-primary:hover {
+            background-color: var(--soft-white);
+            transform: translateY(-2px);
+        }
+        
+        .btn-cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-cta-secondary:hover {
+            background-color: white;
+            color: var(--electric-blue);
+        }
+        
+        .guarantee {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 0;
+            background-color: var(--soft-white);
+        }
+        
+        .faq h2 {
+            text-align: center;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark-charcoal);
+        }
+        
+        .faq-answer {
+            color: var(--text-gray);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-charcoal);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: #999;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            opacity: 1;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .path-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-bar {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .path-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .milestone-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://repmkt.s3.ca-central-1.amazonaws.com/repmkt-images/repmkt-logo-green-icon.png" alt="Real Estate Photography Growth Lab">
+            </div>
+            <div class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#free-tools">Free Tools</a>
+                <a href="#community">Community</a>
+                <a href="#faq">FAQ</a>
+                <a href="#cta" class="btn btn-outline nav-btn">Join Free →</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <span class="hero-badge">⚡ Join 500+ photographers</span>
+                    <h1>Stop Cold Calling. Start Converting.</h1>
+                    <p class="hero-subheadline">The complete system for getting realtors to come to YOU—with automated tools they actually want to use.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#cta" class="btn btn-primary">Join the Free Community →</a>
+                        <a href="#how-it-works" class="btn btn-outline">See How It Works →</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No credit card</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5 from 200+ reviews</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="sms-message">
+                            <p>🏠 Congrats on the new listing at 123 Main St! 🎉</p>
+                            <p>Want a FREE custom social media reel to help market it? Reply YES</p>
+                        </div>
+                        <div class="sms-reply">
+                            <p>YES! Send it over 👋</p>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 1rem; background: #2962FF20; border-radius: 10px; border: 1px solid #2962FF50;">
+                            <p style="margin: 0; font-size: 0.9rem;">⚡ Generating your reel... (85% complete)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>You're An Amazing Photographer. So Why Is Getting Realtor Clients Such A Struggle?</h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <div>
+                        <strong>Cold Outreach Feels Spammy</strong>
+                        <p>You hate bothering people, and realtors hate being bothered. Your messages go unanswered.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <strong>Inconsistent Income</strong>
+                        <p>Feast or famine cycles make it impossible to plan or grow your business.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div>
+                        <strong>Wasted Marketing Spend</strong>
+                        <p>$500 on Facebook ads, $1,000 on mailers... and you get crickets.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong>Realtors Already Have "Their Guy"</strong>
+                        <p>Breaking through feels impossible. They've worked with the same photographer for years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="how-it-works">
+        <div class="container">
+            <h2>Introducing The Realtor Acquisition Engine</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--text-gray);">A fully automated system that delivers value to realtors at the exact moment they need it most.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">🔍</div>
+                    <h3>Detect</h3>
+                    <p>Our system scrapes new listings hourly, detecting exactly when a realtor lists a property.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🤝</div>
+                    <h3>Deliver Value</h3>
+                    <p>They receive a text offering a free marketing tool. Most reply YES.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">📸</div>
+                    <h3>Convert</h3>
+                    <p>While the tool generates, they see your branding and a special offer. They book their first shoot.</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-quote">
+                <i class="fas fa-quote-left" style="color: var(--growth-green); opacity: 0.5; font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+                <p style="font-size: 1.1rem;">"I sent this to a realtor I'd been trying to reach for 6 months. She ignored every email. The day she listed a new property, she got the SMS, used the reel generator, and booked me 2 hours later."</p>
+                <p style="margin-top: 1rem; font-weight: 600;">— Mike R., Growth Lab Member</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Tools Section -->
+    <section class="free-tools" id="free-tools">
+        <div class="container">
+            <h2>4 Free Tools That Realtors Actually Use</h2>
+            <p class="free-tools-subhead">Give them instant marketing assets. Get warm leads and booked shoots in return.</p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <i class="fas fa-film"></i>
+                    <h3>Reel Generator</h3>
+                    <p>Creates 3 vertical reels from property photos in 60 seconds</p>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Flyer Generator</h3>
+                    <p>Print-ready PDF property flyers with agent info</p>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-play-circle"></i>
+                    <h3>Slideshow Generator</h3>
+                    <p>Cinematic video slideshows for social media</p>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-qrcode"></i>
+                    <h3>QR Generator</h3>
+                    <p>4 customizable QR codes for open houses</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <i class="fas fa-lightbulb"></i>
+                <h3 style="color: white;">While the tool generates, they see YOUR branding and a special offer.</h3>
+                <p style="color: rgba(255,255,255,0.9);">Conversion rates on this offer: 25-40%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Offer Section -->
+    <section class="community" id="community">
+        <div class="container">
+            <h2>This Isn't Just Theory. It's A Done-For-You System.</h2>
+            <p class="community-subhead">And you can start using it today—for free.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <h4>Automation Blueprints</h4>
+                        <p>Complete n8n workflows for scraping Realtor.ca and Zillow</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <div>
+                        <h4>SMS Templates</h4>
+                        <p>The exact scripts that get "YES" replies from realtors</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tools"></i>
+                    <div>
+                        <h4>The 4 Free Tools</h4>
+                        <p>Access to the same tools that convert realtors</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-video"></i>
+                    <div>
+                        <h4>DIY Video Training</h4>
+                        <p>Step-by-step tutorials for every piece of the system</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h4>Community Q&A</h4>
+                        <p>Ask questions, get answers, see what's working</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <h4>Weekly Live Trainings</h4>
+                        <p>New strategies, case studies, and open Q&A</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fast-start">
+                <h4>🚀 The 14-Day Fast Start</h4>
+                <ol>
+                    <li><strong>Day 1:</strong> Watch the 15-min onboarding video</li>
+                    <li><strong>Day 3:</strong> Set up your n8n workflows</li>
+                    <li><strong>Day 5:</strong> Configure your Apify scraper for your city</li>
+                    <li><strong>Day 7:</strong> First realtor contacts detected</li>
+                    <li><strong>Day 10:</strong> First SMS goes out</li>
+                    <li><strong>Day 14:</strong> First "YES" reply and free tool generated</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>From Zero To Fully Booked: Real Photographers, Real Results</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I was spending $800/month on Facebook ads getting nothing. Your system booked me 12 shoots in 30 days. The SMS automation is pure genius."</p>
+                    <div class="testimonial-author">Mike R.</div>
+                    <div class="testimonial-location">Toronto</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The free tools alone are worth 10x the membership. My realtors LOVE the reel generator—they use it for every listing."</p>
+                    <div class="testimonial-author">Jessica T.</div>
+                    <div class="testimonial-location">Austin</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I joined because I was tired of cold calling. Now my system runs itself while I shoot. Best decision I've made for my business."</p>
+                    <div class="testimonial-author">David K.</div>
+                    <div class="testimonial-location">Melbourne</div>
+                </div>
+            </div>
+            
+            <div class="stats-bar">
+                <div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Members</div>
+                </div>
+                <div>
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div>
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Realtor Outreach</div>
+                </div>
+                <div>
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">Avg Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Your First 30 Days In The Growth Lab</h2>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 3rem;">From join to first lead in 14 days. Here's exactly what happens.</p>
+            
+            <div class="path-steps">
+                <div class="path-step">
+                    <div class="path-number">1</div>
+                    <h4>Join Free</h4>
+                    <p style="color: var(--text-gray);">Click the button, fill out the form (2 min)</p>
+                </div>
+                <div class="path-step">
+                    <div class="path-number">2</div>
+                    <h4>Get Oriented</h4>
+                    <p style="color: var(--text-gray);">Book your 15-min welcome call or dive into training</p>
+                </div>
+                <div class="path-step">
+                    <div class="path-number">3</div>
+                    <h4>Build Your System</h4>
+                    <p style="color: var(--text-gray);">Follow step-by-step videos to set up your automations</p>
+                </div>
+                <div class="path-step">
+                    <div class="path-number">4</div>
+                    <h4>Launch & Learn</h4>
+                    <p style="color: var(--text-gray);">First SMS goes out. You get replies. You grow.</p>
+                </div>
+            </div>
+            
+            <div class="milestones">
+                <div class="milestone-grid">
+                    <div class="milestone">Week 1 <small>System built</small></div>
+                    <div class="milestone">Week 2 <small>First outreach</small></div>
+                    <div class="milestone">Week 3 <small>First "YES"</small></div>
+                    <div class="milestone">Week 4 <small>First booking</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main CTA Section -->
+    <section class="cta" id="cta">
+        <div class="container">
+            <h2>Join 500+ Photographers Who Never Worry About Realtor Clients</h2>
+            <p>Start with the free community. No credit card. No commitment. Just a proven system and a group of photographers who want to see you win.</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-cta-primary">Join the Free Community →</a>
+                <a href="#" class="btn btn-cta-secondary">See How The System Works →</a>
+                <a href="#" class="btn btn-cta-secondary">Explore the Growth Lab →</a>
+            </div>
+            
+            <p class="guarantee"><i class="fas fa-lock" style="margin-right: 0.5rem;"></i> Takes 2 minutes. No credit card. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Questions? We've Got Answers.</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">What exactly do I get in the free community?</div>
+                    <div class="faq-answer">Instant access to automation blueprints (n8n workflows, Apify scraper configs), the 4 free tools, SMS/email templates, weekly live trainings, and community Q&A.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do I need to be technical to use this?</div>
+                    <div class="faq-answer">If you can follow a YouTube tutorial, you can build this system. Our training is step-by-step with community support. If you want us to do it for you, that's available separately.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Does this work outside the US and Canada?</div>
+                    <div class="faq-answer">Yes. Members in Australia, the UK, and Europe use the system with their local MLS equivalents. The principles are universal.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How long until I see my first lead?</div>
+                    <div class="faq-answer">Most members get their first "YES" reply within 7-14 days of launching. First bookings typically happen in weeks 2-4.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is this really free? What's the catch?</div>
+                    <div class="faq-answer">No catch. The free community exists to show you what's possible. You can stay free forever and still get massive value. We have paid tiers for deeper training and done-for-you setup.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://repmkt.s3.ca-central-1.amazonaws.com/repmkt-images/repmkt-logo-green-icon.png" alt="Real Estate Photography Growth Lab">
+                    <p style="color: #999; margin-top: 1rem;">Building predictable, automated client acquisition systems for photographers worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#">Home</a>
+                    <a href="#community">Free Community</a>
+                    <a href="#">About</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Real Estate Photography Growth Lab. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
