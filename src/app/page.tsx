@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import HeroParticles from "@/components/HeroParticles";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <span className={styles.heroBadge}>⚡ Join 500+ photographers</span>
+              <span className={styles.heroBadge}>⚡ RE Photographers Worldwide</span>
               <h1>Install Your Realtor Acquisition Engine.</h1>
               <p className={styles.heroSubheadline}>
                 Stop chasing realtors.<br />
@@ -141,15 +142,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.testimonialQuote}>
-            <i className="fas fa-quote-left"></i>
-            <p>
-              &quot;I sent this to a realtor I&apos;d been trying to reach for 6 months.
-              She ignored every email. The day she listed a new property, she
-              got the SMS, used the reel generator, and booked me 2 hours
-              later.&quot;
-            </p>
-            <p className={styles.quoteAuthor}>— Mike R., Growth Lab Member</p>
+          <div className={styles.testimonialCta}>
+            <Link href="/join" className="btn btn-primary">
+              Explore the Growth Lab →
+            </Link>
           </div>
         </div>
       </section>
@@ -167,7 +163,7 @@ export default function Home() {
             <div className={styles.toolCard}>
               <i className="fas fa-film"></i>
               <h3>Reel Generator</h3>
-              <p>Creates 3 vertical reels from property photos in 60 seconds</p>
+              <p>Creates 3 vertical reels from property photos in a few minutes</p>
             </div>
             <div className={styles.toolCard}>
               <i className="fas fa-file-pdf"></i>
@@ -220,8 +216,8 @@ export default function Home() {
             <div className={styles.featureItem}>
               <i className="fas fa-tools"></i>
               <div>
-                <h4>The 4 Free Tools</h4>
-                <p>Access to the same tools that convert realtors</p>
+                <h4>The 4 Free Tools for Realtors</h4>
+                <p>Build to the same tools that convert realtors</p>
               </div>
             </div>
             <div className={styles.featureItem}>
@@ -264,56 +260,34 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className={styles.testimonials}>
         <div className="container">
-          <h2>From Zero To Fully Booked: Real Photographers, Real Results</h2>
+          <h2>This Community Is For You If…</h2>
 
-          <div className={styles.testimonialGrid}>
-            <div className={styles.testimonialCard}>
-              <div className={styles.stars}>★★★★★</div>
-              <p>
-                &quot;I was spending $800/month on Facebook ads getting nothing. Your
-                system booked me 12 shoots in 30 days. The SMS automation is pure
-                genius.&quot;
-              </p>
-              <div className={styles.testimonialAuthor}>Mike R.</div>
-              <div className={styles.testimonialLocation}>Toronto</div>
+          <div className={styles.fitGrid}>
+            <div className={styles.fitCard}>
+              <ul className={styles.fitList}>
+                <li><span className={styles.checkMark}>✔</span> You&apos;re a new real estate photographer who wants structure from day one</li>
+                <li><span className={styles.checkMark}>✔</span> You&apos;re stuck between $2K–$5K/month and want consistency</li>
+                <li><span className={styles.checkMark}>✔</span> You&apos;re tired of unpredictable referrals</li>
+                <li><span className={styles.checkMark}>✔</span> You like systems more than hustle</li>
+                <li><span className={styles.checkMark}>✔</span> You want growth that scales</li>
+              </ul>
             </div>
-            <div className={styles.testimonialCard}>
-              <div className={styles.stars}>★★★★★</div>
-              <p>
-                &quot;The free tools alone are worth 10x the membership. My realtors
-                LOVE the reel generator—they use it for every listing.&quot;
-              </p>
-              <div className={styles.testimonialAuthor}>Jessica T.</div>
-              <div className={styles.testimonialLocation}>Austin</div>
-            </div>
-            <div className={styles.testimonialCard}>
-              <div className={styles.stars}>★★★★★</div>
-              <p>
-                &quot;I joined because I was tired of cold calling. Now my system runs
-                itself while I shoot. Best decision I&apos;ve made for my business.&quot;
-              </p>
-              <div className={styles.testimonialAuthor}>David K.</div>
-              <div className={styles.testimonialLocation}>Melbourne</div>
+            <div className={`${styles.fitCard} ${styles.notForCard}`}>
+              <h3 className={styles.notForTitle}>This Is NOT For You If…</h3>
+              <ul className={styles.notFitList}>
+                <li><span className={styles.xMark}>✖</span> You want overnight hacks</li>
+                <li><span className={styles.xMark}>✖</span> You avoid technology</li>
+                <li><span className={styles.xMark}>✖</span> You don&apos;t want to build systems</li>
+              </ul>
             </div>
           </div>
 
-          <div className={styles.statsBar}>
-            <div>
-              <div className={styles.statNumber}>500+</div>
-              <div className={styles.statLabel}>Members</div>
-            </div>
-            <div>
-              <div className={styles.statNumber}>12</div>
-              <div className={styles.statLabel}>Countries</div>
-            </div>
-            <div>
-              <div className={styles.statNumber}>15K+</div>
-              <div className={styles.statLabel}>Realtor Outreach</div>
-            </div>
-            <div>
-              <div className={styles.statNumber}>4.9★</div>
-              <div className={styles.statLabel}>Avg Rating</div>
-            </div>
+          <p className={styles.operatorText}>This is for operators.</p>
+
+          <div className={styles.testimonialCta}>
+            <Link href="/join" className="btn btn-primary">
+              Join the Free Community →
+            </Link>
           </div>
         </div>
       </section>
@@ -371,21 +345,15 @@ export default function Home() {
       {/* CTA Section */}
       <section className={styles.cta} id="cta">
         <div className="container">
-          <h2>Join 500+ Photographers Who Never Worry About Realtor Clients</h2>
+          <h2>Install Once. Let It Run.</h2>
           <p>
             Start with the free community. No credit card. No commitment. Just a
             proven system and a group of photographers who want to see you win.
           </p>
 
           <div className={styles.ctaButtons}>
-            <Link href="#" className="btn btn-cta-primary">
+            <Link href="/join" className="btn btn-cta-primary">
               Join the Free Community →
-            </Link>
-            <Link href="#" className="btn btn-cta-secondary">
-              See How The System Works →
-            </Link>
-            <Link href="#" className="btn btn-cta-secondary">
-              Explore the Growth Lab →
             </Link>
           </div>
 
@@ -400,57 +368,7 @@ export default function Home() {
       <section className={styles.faq} id="faq">
         <div className="container">
           <h2>Questions? We&apos;ve Got Answers.</h2>
-
-          <div className={styles.faqGrid}>
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                What exactly do I get in the free community?
-              </div>
-              <div className={styles.faqAnswer}>
-                Instant access to automation blueprints (n8n workflows, Apify
-                scraper configs), the 4 free tools, SMS/email templates, weekly
-                live trainings, and community Q&A.
-              </div>
-            </div>
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                Do I need to be technical to use this?
-              </div>
-              <div className={styles.faqAnswer}>
-                If you can follow a YouTube tutorial, you can build this system.
-                Our training is step-by-step with community support. If you want
-                us to do it for you, that&apos;s available separately.
-              </div>
-            </div>
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                Does this work outside the US and Canada?
-              </div>
-              <div className={styles.faqAnswer}>
-                Yes. Members in Australia, the UK, and Europe use the system
-                with their local MLS equivalents. The principles are universal.
-              </div>
-            </div>
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                How long until I see my first lead?
-              </div>
-              <div className={styles.faqAnswer}>
-                Most members get their first &quot;YES&quot; reply within 7-14 days of
-                launching. First bookings typically happen in weeks 2-4.
-              </div>
-            </div>
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                Is this really free? What&apos;s the catch?
-              </div>
-              <div className={styles.faqAnswer}>
-                No catch. The free community exists to show you what&apos;s possible.
-                You can stay free forever and still get massive value. We have
-                paid tiers for deeper training and done-for-you setup.
-              </div>
-            </div>
-          </div>
+          <FaqAccordion />
         </div>
       </section>
     </main>

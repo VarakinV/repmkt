@@ -1,0 +1,117 @@
+.legalPage {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.lastUpdated {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--text-gray);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  color: var(--text-gray);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.card a {
+  color: var(--electric-blue);
+  text-decoration: underline;
+}
+
+.card a:hover {
+  opacity: 0.8;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 2.5rem;
+  color: var(--electric-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .legalPage {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    padding: 2rem 1.25rem;
+  }
+
+  .card h1 {
+    font-size: 1.75rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+}
+
