@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Invisible Photographer · real estate photography score</title>
+  <!-- Google Font & basic icons via Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #ffffff;
+      color: #1e1e2f;
+      line-height: 1.5;
+    }
+
+    /* brand colors */
+    :root {
+      --electric-blue: #2962FF;
+      --growth-green: #00C853;
+      --dark-bg: #0f172a;      /* used sparsely for contrast sections */
+      --soft-white: #f8fafc;
+      --gray-border: #e2e8f0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(145deg, #ffffff 0%, #f5f9ff 100%);
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .result-badge {
+      display: inline-block;
+      background-color: #eef2ff;
+      color: var(--electric-blue);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
+      border-radius: 30px;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.25rem;
+      border: 1px solid rgba(41, 98, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #0b1b33;
+    }
+
+    .hero-sub {
+      font-size: 1.3rem;
+      color: #334155;
+      max-width: 780px;
+      font-weight: 400;
+      margin-top: 0.25rem;
+    }
+
+    /* score indicator */
+    .score-wrap {
+      background: white;
+      border-radius: 40px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0 0.5rem;
+      box-shadow: 0 12px 30px -10px rgba(0,0,0,0.1);
+      border: 1px solid var(--gray-border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .score-label {
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .score-circles {
+      font-size: 2.2rem;
+      letter-spacing: 6px;
+      line-height: 1;
+      color: #cbd5e1; /* empty circle color */
+    }
+
+    .score-circles span {
+      color: var(--growth-green);
+    }
+
+    .score-number {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--electric-blue);
+      background: #e0e7ff;
+      padding: 0.2rem 1.2rem;
+      border-radius: 60px;
+      display: inline-block;
+    }
+
+    .score-note {
+      color: #475569;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      flex-basis: 100%;
+    }
+
+    /* quick summary box */
+    .summary-box {
+      background: #f0f9ff;
+      border-left: 5px solid var(--electric-blue);
+      border-radius: 24px;
+      padding: 2rem 2rem;
+      margin: 2.2rem 0 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .summary-box h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      font-size: 1.1rem;
+    }
+
+    .summary-box li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .summary-box i {
+      color: var(--growth-green);
+      width: 1.6rem;
+      font-size: 1.3rem;
+    }
+
+    /* section headings */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      color: #0f172a;
+    }
+
+    .section-sub {
+      font-size: 1.2rem;
+      color: #334155;
+      max-width: 800px;
+    }
+
+    .problem-section, .roadmap-section, .insight-section, .cta-section, .authority-section, .social-proof {
+      padding: 2.5rem 0;
+    }
+
+    .bg-soft-white {
+      background-color: var(--soft-white);
+    }
+
+    .bg-white {
+      background-color: #ffffff;
+    }
+
+    /* roadmap steps */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0 1rem;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 30px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.06);
+      border: 1px solid var(--gray-border);
+      transition: all 0.2s;
+    }
+
+    .step-card:hover {
+      border-color: var(--electric-blue);
+    }
+
+    .step-number {
+      background: var(--electric-blue);
+      color: white;
+      width: 45px;
+      height: 45px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-card h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-card p {
+      color: #334155;
+    }
+
+    /* insight block */
+    .insight-block {
+      background: #0f172a;
+      color: white;
+      border-radius: 32px;
+      padding: 3rem;
+      margin: 2rem 0;
+    }
+
+    .insight-block p {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 900px;
+    }
+
+    .insight-block strong {
+      color: var(--growth-green);
+      font-weight: 700;
+    }
+
+    /* cta sections */
+    .cta-primary {
+      background: var(--electric-blue);
+      border-radius: 40px;
+      padding: 3.5rem 2.5rem;
+      color: white;
+      text-align: center;
+      margin: 2rem 0 0;
+    }
+
+    .cta-primary h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-primary p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--electric-blue);
+      font-weight: 700;
+      font-size: 1.3rem;
+      padding: 1rem 3rem;
+      border-radius: 60px;
+      text-decoration: none;
+      box-shadow: 0 12px 20px -14px rgba(0,0,0,0.3);
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+      background: #f0f4ff;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--electric-blue);
+      border: 2px solid var(--electric-blue);
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 0.9rem 2.5rem;
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background: var(--electric-blue);
+      color: white;
+    }
+
+    .cta-secondary {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border: 2px dashed var(--gray-border);
+      border-radius: 48px;
+      margin: 2rem 0;
+    }
+
+    .small-print {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 1rem;
+    }
+
+    /* authority & social proof */
+    .authority-flex {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .authority-avatar {
+      width: 110px;
+      height: 110px;
+      background: linear-gradient(145deg, var(--electric-blue), #4b7bec);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+      font-weight: 500;
+      box-shadow: 0 15px 25px -10px var(--electric-blue);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .social-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 24px;
+      border: 1px solid var(--gray-border);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .social-item i {
+      color: var(--growth-green);
+      font-size: 2rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid var(--gray-border);
+      margin: 2rem 0;
+    }
+
+    /* mobile fine-tune */
+    @media (max-width: 640px) {
+      h1 { font-size: 2.4rem; }
+      .score-wrap { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .cta-primary h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="result-badge"><i class="fas fa-chart-line" style="margin-right: 0.3rem;"></i> Your photography score</span>
+        <h1>Your Result: <br><span style="color: var(--electric-blue);">The Invisible Photographer</span></h1>
+        <p class="hero-sub">You have the skills to shoot great real estate photos… but agents don’t know you exist yet. Most photographers at this stage aren’t struggling with quality. They’re struggling with visibility.</p>
+      </div>
+
+      <!-- Score indicator -->
+      <div class="score-wrap">
+        <div class="score-label">
+          <i class="fas fa-bullseye" style="color: var(--electric-blue);"></i> Your Business Visibility Score
+        </div>
+        <div class="score-circles">
+          <span>●</span><span>●</span><span>●</span><span>●</span>○ <span class="score-number">20/100</span>
+        </div>
+        <div class="score-note">
+          <i class="fas fa-chart-simple" style="color: var(--growth-green); margin-right: 0.3rem;"></i> This means your photography business has huge growth potential once agents start discovering you.
+        </div>
+      </div>
+
+      <!-- quick summary -->
+      <div class="summary-box">
+        <h3><i class="fas fa-camera" style="color: var(--electric-blue);"></i> 📸 What this means</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> You likely take solid photos</li>
+          <li><i class="fas fa-check-circle"></i> Have a portfolio or Instagram</li>
+          <li><i class="fas fa-check-circle"></i> Get occasional inquiries</li>
+          <li><i class="fas fa-exclamation-triangle" style="color: #f97316;"></i> But consistent agent clients are missing.</li>
+        </ul>
+        <p style="margin-top: 1rem; background: rgba(41,98,255,0.08); padding: 1rem; border-radius: 20px;">
+          That usually happens when photographers rely on: referrals, random inquiries, or hoping agents find them online.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The real problem -->
+  <section class="problem-section bg-soft-white">
+    <div class="container">
+      <h2 class="section-title">The problem isn’t your photography <span style="color: var(--electric-blue);">— it’s visibility</span></h2>
+      <p class="section-sub">Every week in your city hundreds of homes get listed, dozens of agents need photography, the same agents list repeatedly. But most photographers are invisible to those agents. Not because their photos aren't good — because no one introduced them yet.</p>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; background: white; border-radius: 40px; padding: 2rem; border: 1px solid var(--gray-border);">
+        <div style="flex:1; min-width: 220px;">
+          <i class="fas fa-home" style="color: var(--growth-green); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+          <h4 style="font-weight: 700;">Relationship business</h4>
+          <p style="color:#334155;">Agents hire photographers they know, trust, and remember. Right now they simply haven’t discovered you. And that’s fixable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Growth roadmap -->
+  <section class="roadmap-section">
+    <div class="container">
+      <h2 class="section-title">Your growth roadmap</h2>
+      <p class="section-sub">The exact progression from invisible → consistently booked.</p>
+      <div class="roadmap-grid">
+        <div class="step-card"><div class="step-number">1</div><h4>Identify active listing agents</h4><p>Your best clients are agents listing homes every week. Find them, and you find ideal prospects.</p></div>
+        <div class="step-card"><div class="step-number">2</div><h4>Reach out & introduce</h4><p>Most photographers never do this. A simple intro can start a years‑long relationship.</p></div>
+        <div class="step-card"><div class="step-number">3</div><h4>Follow up consistently</h4><p>No response is normal. Stay on radar → when they need photos, they remember you.</p></div>
+        <div class="step-card"><div class="step-number">4</div><h4>Turn first shoots into repeat clients</h4><p>One booking leads to referrals, repeat listings, and stable monthly income.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key insight (what photographers get wrong) -->
+  <section class="insight-section bg-soft-white">
+    <div class="container">
+      <div class="insight-block">
+        <p style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">⚠️ What most photographers get wrong</p>
+        <p>They try to grow through Instagram posts, random Facebook ads, or hoping agents search Google. <br><br>But the fastest way is directly connecting with agents listing homes. Once you have a list of agents and a simple outreach system… your business becomes predictable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Primary CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-primary">
+        <h2>Want to fix this fast?</h2>
+        <p>I built a free community for real estate photographers where I share the exact systems used to grow photography businesses.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: center; margin: 2rem 0 1.5rem; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+          <span style="display: flex; align-items: center; gap:0.4rem;"><i class="fas fa-check-circle" style="color: var(--growth-green);"></i> Find agents listing weekly</span>
+          <span style="display: flex; align-items: center; gap:0.4rem;"><i class="fas fa-check-circle" style="color: var(--growth-green);"></i> Outreach scripts that work</span>
+          <span style="display: flex; align-items: center; gap:0.4rem;"><i class="fas fa-check-circle" style="color: var(--growth-green);"></i> Automation & follow‑ups</span>
+          <span style="display: flex; align-items: center; gap:0.4rem;"><i class="fas fa-check-circle" style="color: var(--growth-green);"></i> Local SEO & marketing systems</span>
+        </div>
+        <a href="#" class="btn">Join the Real Estate Photographer Community</a>
+        <div class="small-print" style="color: #dee4f0;">Free to join • Step-by-step training • Photographer community</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secondary CTA -->
+  <section class="container">
+    <div class="cta-secondary">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;">Want the full system?</h2>
+      <p style="max-width: 600px; margin: 0 auto 1.8rem; color: #334155;">Inside the community you’ll see how photographers build systems that bring consistent bookings — instead of relying on random referrals, slow seasons, or hoping agents find you.</p>
+      <a href="#" class="btn btn-secondary">Join the Free Community</a>
+    </div>
+  </section>
+
+  <!-- Authority section -->
+  <section class="authority-section bg-soft-white">
+    <div class="container">
+      <div class="authority-flex">
+        <div class="authority-avatar">
+          <i class="fas fa-user" style="font-size: 3.5rem;"></i>
+        </div>
+        <div style="flex:1;">
+          <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">About the creator</h3>
+          <p style="font-size: 1.15rem; color: #1e293b;">I'm a real estate photographer and marketing automation specialist helping photographers build systems that consistently attract agent clients. Inside the community I share marketing systems, automation tools, outreach strategies, and SEO — all focused on one thing: <span style="color: var(--electric-blue); font-weight: 600;">getting more real estate photography bookings.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social proof / what members learn -->
+  <section class="social-proof">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 0.5rem;">What photographers are learning inside</h2>
+      <div class="social-grid">
+        <div class="social-item"><i class="fas fa-users"></i> Find agents listing homes automatically</div>
+        <div class="social-item"><i class="fas fa-list-check"></i> Build outreach lists in minutes</div>
+        <div class="social-item"><i class="fas fa-clock"></i> Automate follow‑ups</div>
+        <div class="social-item"><i class="fas fa-chart-line"></i> Grow your photography business</div>
+      </div>
+      <hr>
+      <p style="text-align: center; color: #64748b;"><i class="fas fa-arrow-right" style="color: var(--growth-green);"></i> Join hundreds of photographers already building predictable pipelines <a href="#" style="color: var(--electric-blue); font-weight: 600; text-decoration: none;">→ join free</a></p>
+    </div>
+  </section>
+
+  <!-- subtle footer -->
+  <footer style="background: #0f172a; color: #94a3b8; padding: 2rem; text-align: center;">
+    <p>© Real Estate Photographer Growth Lab — <span style="color: var(--growth-green);">score result: invisible photographer</span></p>
+  </footer>
+</body>
+</html>

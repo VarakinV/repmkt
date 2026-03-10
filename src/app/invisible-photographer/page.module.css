@@ -1,0 +1,537 @@
+.page {
+  min-height: calc(100vh - 80px);
+}
+
+.heroBand,
+.sectionBand {
+  padding: 5rem 0;
+}
+
+.heroBand {
+  position: relative;
+  background: linear-gradient(135deg, var(--dark-charcoal) 0%, #1a1d21 100%);
+  overflow: hidden;
+}
+
+.heroBand :global(.container) {
+  position: relative;
+  z-index: 1;
+}
+
+.lightBand {
+  background-color: var(--soft-white);
+}
+
+.whiteBand {
+  background-color: white;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.heroCopy,
+.heroImageWrap {
+  position: relative;
+  z-index: 1;
+}
+
+.kicker {
+  display: inline-block;
+  background-color: rgba(0, 200, 83, 0.15);
+  color: var(--growth-green);
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.heroCopy h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.heroText {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.heroImageWrap,
+.scoreWrap,
+.summaryBox,
+.problemCard,
+.stepCard,
+.ctaPrimaryCard,
+.ctaSecondaryCard,
+.socialItem {
+  box-shadow: 0 8px 30px rgba(18, 20, 23, 0.08);
+}
+
+.scoreWrap {
+  background: white;
+  border: 1px solid var(--gray-light);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+}
+
+.scoreLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.scoreVisual {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.scoreCircles {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.scoreCircleFilled {
+  color: var(--growth-green);
+}
+
+.scoreCircleEmpty {
+  color: #cbd5e1;
+}
+
+.scoreNumber {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: var(--electric-blue);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.scoreNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  flex-basis: 100%;
+}
+
+.summaryBox {
+  margin-top: 1.5rem;
+  background: #f0f9ff;
+  border-left: 5px solid var(--electric-blue);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.summaryTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.summaryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summaryList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.relianceNote {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  background: rgba(41, 98, 255, 0.08);
+  border-radius: 14px;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+.iconBlue {
+  color: var(--electric-blue);
+}
+
+.iconGreen {
+  color: var(--growth-green);
+}
+
+.iconWarning {
+  color: #f97316;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.sectionSub {
+  max-width: 820px;
+  color: #334155;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.highlight {
+  color: var(--electric-blue);
+}
+
+.problemCard {
+  margin-top: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid var(--gray-light);
+  background: white;
+}
+
+.problemCard h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.problemCard p {
+  color: #334155;
+  line-height: 1.7;
+}
+
+.problemIcon {
+  color: var(--growth-green);
+  font-size: 1.9rem;
+  margin-top: 0.1rem;
+}
+
+.roadmapGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stepCard {
+  background: white;
+  border: 1px solid var(--gray-light);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+}
+
+.stepNumber {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: var(--electric-blue);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.stepCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.stepCard p {
+  color: #334155;
+  line-height: 1.7;
+}
+
+.insightBlock {
+  background: #0f172a;
+  border-radius: 18px;
+  padding: 2.5rem;
+}
+
+.insightEyebrow {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.insightText {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.heroImageWrap {
+  background: white;
+  border-radius: 24px;
+  padding: 1rem;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
+
+.ctaPrimaryCard {
+  background: var(--electric-blue);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.ctaPrimaryCard h2 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.ctaPrimaryCard p {
+  max-width: 700px;
+  margin: 0 auto 1.75rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+}
+
+.ctaFeatureGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem 2rem;
+  max-width: 760px;
+  margin: 2rem auto 1.5rem;
+}
+
+.ctaFeature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+
+.smallPrint {
+  margin-top: 1rem;
+  color: #dee4f0 !important;
+  font-size: 0.95rem;
+}
+
+.ctaSecondaryCard {
+  background: white;
+  border: 2px dashed var(--gray-light);
+  border-radius: 18px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.ctaSecondaryCard h2 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  font-size: 2rem;
+}
+
+.ctaSecondaryCard p {
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.authorityFlex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.authorityAvatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  border: 4px solid var(--electric-blue);
+  box-shadow: 0 15px 25px -10px rgba(41, 98, 255, 0.5);
+}
+
+.authorityPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.authorityCopy {
+  flex: 1;
+  min-width: 280px;
+}
+
+.authorityCopy h2 {
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+  font-size: 2rem;
+}
+
+.authorityCopy p {
+  color: #1e293b;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.socialItem {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 1px solid var(--gray-light);
+  background: white;
+  color: var(--text-dark);
+}
+
+.socialItem i {
+  font-size: 1.6rem;
+}
+
+.socialFooter {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #64748b;
+}
+
+.socialCta {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.inlineLink {
+  color: var(--electric-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inlineLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCopy h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBand,
+  .lightBand,
+  .whiteBand,
+  .sectionBand {
+    padding: 3rem 0;
+  }
+
+  .heroCopy h1 {
+    font-size: 2rem;
+  }
+
+  .scoreWrap,
+  .scoreVisual,
+  .problemCard,
+  .authorityFlex {
+    align-items: flex-start;
+  }
+
+  .scoreWrap,
+  .summaryBox,
+  .problemCard,
+  .stepCard,
+  .insightBlock,
+  .ctaPrimaryCard,
+  .ctaSecondaryCard,
+  .socialItem {
+    padding: 1.5rem;
+  }
+
+  .sectionTitle,
+  .ctaPrimaryCard h2,
+  .ctaSecondaryCard h2,
+  .authorityCopy h2 {
+    font-size: 1.75rem;
+  }
+
+  .insightEyebrow {
+    font-size: 1.4rem;
+  }
+
+  .insightText,
+  .sectionSub {
+    font-size: 1.05rem;
+  }
+
+  .heroImageWrap {
+    padding: 0.75rem;
+  }
+}
+
