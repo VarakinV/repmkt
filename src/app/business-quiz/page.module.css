@@ -1,0 +1,58 @@
+.page {
+  background: #fff;
+}
+
+.embedSection {
+  width: 100%;
+}
+
+.embedShell {
+  position: relative;
+  width: 100%;
+  min-height: 750px;
+  background: white;
+}
+
+.embedContainer {
+  width: 100%;
+  min-height: 750px;
+}
+
+.loaderWrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.94);
+  z-index: 1;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--gray-light);
+  border-top-color: var(--electric-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loadingText {
+  color: var(--text-gray);
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .embedShell,
+  .embedContainer {
+    min-height: 900px;
+  }
+}
