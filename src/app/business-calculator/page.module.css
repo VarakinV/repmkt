@@ -1,0 +1,360 @@
+.page {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
+}
+
+.hero {
+  position: relative;
+  padding: 5rem 0 2.5rem;
+  background: linear-gradient(135deg, var(--dark-charcoal) 0%, #1a1d21 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.hero :global(.container) {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 200, 83, 0.16);
+  color: var(--growth-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  color: white;
+  max-width: 780px;
+}
+
+.subheadline {
+  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.purposeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.purposeItem {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.calculatorSection {
+  padding: 2.5rem 0 5rem;
+}
+
+.conversionSection {
+  padding: 0 0 2.5rem;
+}
+
+.conversionCard {
+  background: white;
+  border: 1px solid var(--gray-light);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+.conversionHeader {
+  margin-bottom: 1.5rem;
+}
+
+.conversionHeader h2 {
+  font-size: 1.9rem;
+  color: var(--text-dark);
+}
+
+.conversionHeader p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.opportunityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.opportunityItem {
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: var(--soft-white);
+  border: 1px solid #e4ebf5;
+}
+
+.opportunityItem strong {
+  color: var(--text-dark);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.opportunityHighlight {
+  background: linear-gradient(135deg, rgba(41, 98, 255, 0.08) 0%, rgba(0, 200, 83, 0.08) 100%);
+}
+
+.insightSection {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.insightCard,
+.systemCard {
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--gray-light);
+}
+
+.insightCard {
+  background: linear-gradient(135deg, rgba(41, 98, 255, 0.08) 0%, rgba(41, 98, 255, 0.02) 100%);
+}
+
+.systemCard {
+  background: #fbfdff;
+}
+
+.insightCard h3,
+.systemCard h3 {
+  margin-bottom: 0.8rem;
+  color: var(--text-dark);
+}
+
+.insightCard p,
+.systemCard p {
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+.systemSteps {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.systemStep {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid var(--gray-light);
+}
+
+.systemStep span {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.systemStep p {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.systemNote {
+  margin-top: 1rem;
+}
+
+.ctaSection {
+  padding: 0 0 5rem;
+}
+
+.ctaCard {
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: var(--electric-blue);
+  color: white;
+  text-align: center;
+  box-shadow: 0 14px 40px rgba(41, 98, 255, 0.28);
+}
+
+.ctaCard h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ctaCard p {
+  max-width: 760px;
+  margin: 0 auto 1.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.calculatorLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.inputCard,
+.outputCard {
+  background: white;
+  border: 1px solid var(--gray-light);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+.inputCard {
+  padding: 2rem;
+}
+
+.outputColumn {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.outputCard {
+  padding: 1.75rem;
+}
+
+.inputCard h2,
+.outputCard h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.sliderList {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sliderGroup {
+  padding: 1.25rem;
+  border: 1px solid var(--gray-light);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+
+.sliderHeader {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.sliderHeader h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.sliderHeader p {
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.sliderValue {
+  flex-shrink: 0;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(41, 98, 255, 0.1);
+  color: var(--electric-blue);
+  font-weight: 700;
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--electric-blue);
+  cursor: pointer;
+}
+
+.sliderScale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+.outputGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.outputItem {
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: var(--soft-white);
+  border: 1px solid #e4ebf5;
+}
+
+.outputHighlight {
+  background: linear-gradient(135deg, rgba(41, 98, 255, 0.08) 0%, rgba(0, 200, 83, 0.08) 100%);
+}
+
+.outputLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+.outputItem strong {
+  color: var(--text-dark);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+  .purposeGrid,
+  .calculatorLayout,
+  .opportunityGrid,
+  .insightSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .subheadline {
+    font-size: 1.05rem;
+  }
+
+  .inputCard,
+  .outputCard,
+  .conversionCard,
+  .ctaCard {
+    padding: 1.25rem;
+  }
+
+  .sliderHeader {
+    flex-direction: column;
+  }
+
+  .outputItem strong {
+    font-size: 1.7rem;
+  }
+}
