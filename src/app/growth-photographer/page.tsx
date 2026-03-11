@@ -2,67 +2,67 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroParticles from "@/components/HeroParticles";
-import styles from "./page.module.css";
+import styles from "../invisible-photographer/page.module.css";
 
 const roadmap = [
   {
-    title: "Identify active listing agents",
-    text: "Your best clients are agents listing homes every week. Find them, and you find your ideal prospects.",
+    title: "Strengthen your local SEO presence",
+    text: "When agents search online for help quickly, showing up near the top makes you the first photographer they contact.",
   },
   {
-    title: "Reach out and introduce",
-    text: "Most photographers never do this. A simple introduction can start a relationship that turns into years of bookings.",
+    title: "Build a system to connect with new agents",
+    text: "A simple outreach system keeps new agents discovering your services instead of growth depending only on your current relationships.",
   },
   {
-    title: "Follow up consistently",
-    text: "No response is normal. Stay on their radar, and when they need photos, they remember you.",
+    title: "Focus on high-producing agents",
+    text: "A few strong relationships with agents who list often can create steady monthly bookings and far more predictable revenue.",
   },
   {
-    title: "Turn first shoots into repeat clients",
-    text: "One booking leads to repeat listings, referrals, and the stable monthly income every photographer wants.",
+    title: "Create repeatable workflows",
+    text: "Standardize scheduling, communication, delivery, and follow-ups so the business grows without adding constant stress and manual work.",
   },
 ];
 
 const actionPlan = [
   {
-    title: "Increase your visibility with real estate agents in your area",
-    text: "Right now the biggest challenge isn’t your photography. It’s that most agents in your market simply don’t know you exist yet. Every week agents are listing homes and hiring photographers. Once those agents become aware of your services, your chances of getting bookings increase dramatically. Your first goal is simply getting your name in front of the right agents.",
+    title: "Increase your visibility when agents search for photographers",
+    text: "Many agents search online when they need photography. If your business appears first in local searches, you become the default option for new clients. Strengthening your local SEO can bring you consistent inbound inquiries.",
   },
   {
-    title: "Identify agents who are actively listing homes",
-    text: "Not every agent needs photography regularly. But some agents list multiple homes every month. These are the agents most likely to become repeat clients. By identifying the agents who are actively listing homes in your market, you instantly find the people who need photography the most.",
+    title: "Expand your network of active listing agents",
+    text: "Even if you already have agent clients, your growth accelerates when you regularly connect with new agents entering the market. This keeps your pipeline full and protects your business from relying on only a few clients.",
   },
   {
-    title: "Start simple outreach and introductions",
-    text: "Many photographers wait for agents to discover them. But a short, friendly introduction can often be the start of a new working relationship. Once agents see your work and know you’re available, they are much more likely to reach out when they need photos for a listing. The key is simply getting on their radar.",
+    title: "Build systems that reduce manual work",
+    text: "At this stage, your time becomes extremely valuable. Simple systems and workflows can automate lead generation, follow-ups, and client onboarding so you can grow without working longer hours.",
   },
 ];
 
 const learningItems = [
   {
-    icon: "fas fa-users",
-    text: "Find agents listing homes automatically",
+    icon: "fas fa-magnifying-glass-location",
+    text: "Rank higher in local search results",
   },
   {
     icon: "fas fa-list-check",
-    text: "Build outreach lists in minutes",
+    text: "Build outreach lists of active agents",
   },
   {
     icon: "fas fa-clock",
-    text: "Automate follow-ups",
+    text: "Automate follow-ups and lead generation",
   },
   {
     icon: "fas fa-chart-line",
-    text: "Grow your photography business",
+    text: "Create marketing systems that bring consistent bookings",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "The Invisible Photographer | RE Photography Growth Lab",
-  description: "Quiz result page for photographers who need more visibility and more agent discovery.",
+  title: "The Growth Photographer | RE Photography Growth Lab",
+  description: "Quiz result page for photographers with a solid business who want more predictable, scalable growth.",
 };
 
-export default function InvisiblePhotographerPage() {
+export default function GrowthPhotographerPage() {
   return (
     <main className={styles.page}>
       <section className={styles.heroBand}>
@@ -71,18 +71,18 @@ export default function InvisiblePhotographerPage() {
           <div className={styles.hero}>
             <div className={styles.heroCopy}>
               <span className={styles.kicker}>Quiz Result</span>
-              <h1>Your Result: The Invisible Photographer</h1>
+              <h1>Your Result: The Growth Photographer</h1>
               <p className={styles.lead}>
-                You have the skills to shoot great real estate photos… but agents don&apos;t know you exist yet.
+                You&apos;ve already built a solid real estate photography business. You have regular shoots and agent clients… but the next challenge is scaling without burning out.
               </p>
               <p className={styles.heroText}>
-                Most photographers at this stage aren&apos;t struggling with quality. They&apos;re struggling with visibility.
+                At this stage, growth isn&apos;t about finding any clients anymore. It&apos;s about building predictable systems that support long-term growth.
               </p>
             </div>
             <div className={styles.heroImageWrap}>
               <Image
-                src="https://repmkt.s3.ca-central-1.amazonaws.com/repmkt-images/Invisible-photographer-2.webp"
-                alt="Invisible photographer result"
+                src="https://repmkt.s3.ca-central-1.amazonaws.com/repmkt-images/growth-photographer.webp"
+                alt="Growth photographer result"
                 width={640}
                 height={760}
                 className={styles.heroImage}
@@ -98,22 +98,22 @@ export default function InvisiblePhotographerPage() {
           <div className={styles.scoreWrap}>
             <div className={styles.scoreLabel}>
               <i className={`fas fa-bullseye ${styles.iconBlue}`} aria-hidden="true"></i>
-              <span>Your Business Visibility Score</span>
+              <span>Your Business Growth Score</span>
             </div>
             <div className={styles.scoreVisual}>
               <div className={styles.scoreCircles} aria-hidden="true">
                 <span className={styles.scoreCircleFilled}>●</span>
-                <span className={styles.scoreCircleEmpty}>○</span>
-                <span className={styles.scoreCircleEmpty}>○</span>
+                <span className={styles.scoreCircleFilled}>●</span>
+                <span className={styles.scoreCircleFilled}>●</span>
                 <span className={styles.scoreCircleEmpty}>○</span>
                 <span className={styles.scoreCircleEmpty}>○</span>
               </div>
-              <span className={styles.scoreNumber}>20/100</span>
+              <span className={styles.scoreNumber}>60/100</span>
             </div>
             <p className={styles.scoreNote}>
               <i className={`fas fa-chart-line ${styles.iconGreen}`} aria-hidden="true"></i>
               <span>
-                This means your photography business has huge growth potential once agents start discovering you.
+                You&apos;ve already done the hardest part — proving demand for your services. Now the goal is making your business more predictable and scalable.
               </span>
             </p>
           </div>
@@ -126,23 +126,23 @@ export default function InvisiblePhotographerPage() {
             <ul className={styles.summaryList}>
               <li>
                 <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
-                <span>You likely take solid photos</span>
+                <span>You have a solid portfolio and reputation</span>
               </li>
               <li>
                 <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
-                <span>Have a portfolio or Instagram</span>
+                <span>Work with several real estate agents</span>
               </li>
               <li>
                 <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
-                <span>Get occasional inquiries</span>
+                <span>Book shoots on a regular basis</span>
               </li>
               <li>
                 <i className={`fas fa-exclamation-triangle ${styles.iconWarning}`} aria-hidden="true"></i>
-                <span>But consistent agent clients are missing.</span>
+                <span>But growth still comes with friction and manual work.</span>
               </li>
             </ul>
             <p className={styles.relianceNote}>
-              That usually happens when photographers rely on: referrals, random inquiries, or hoping agents find them online.
+              Many photographers at this stage still experience busy weeks followed by slow weeks, heavy reliance on the same few agents, limited marketing systems, and too many manual tasks. The business works… but it isn&apos;t fully optimized yet.
             </p>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function InvisiblePhotographerPage() {
             <span className={styles.actionPlanEyebrow}>Your next move</span>
             <h2 className={styles.sectionTitle}>Your Personalized Action Plan</h2>
             <p className={styles.sectionSub}>
-              Based on your quiz answers, the fastest way to grow your real estate photography business is to focus on these three priorities:
+              Based on your quiz answers, the fastest way to grow your real estate photography business now is to focus on these three priorities:
             </p>
           </div>
 
@@ -182,19 +182,17 @@ export default function InvisiblePhotographerPage() {
 
       <section className={`${styles.lightBand} ${styles.sectionBand}`}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>
-            The problem isn&apos;t your photography <span className={styles.highlight}>— it&apos;s visibility</span>
-          </h2>
+          <h2 className={styles.sectionTitle}>The next challenge is predictable growth</h2>
           <p className={styles.sectionSub}>
-            Every week in your city, hundreds of homes get listed, dozens of agents need photography, and the same agents list repeatedly. But most photographers are invisible to those agents. Not because their photos aren&apos;t good — because no one introduced them yet.
+            You no longer need proof that agents want your services. What matters now is reducing the swings, widening your lead flow, and creating systems that support steady growth instead of constant effort.
           </p>
 
           <div className={styles.problemCard}>
-            <i className={`fas fa-home ${styles.problemIcon}`} aria-hidden="true"></i>
+            <i className={`fas fa-layer-group ${styles.problemIcon}`} aria-hidden="true"></i>
             <div>
-              <h3>Relationship business</h3>
+              <h3>Good business, not yet optimized</h3>
               <p>
-                Agents hire photographers they know, trust, and remember. Right now they simply haven&apos;t discovered you yet. And that&apos;s fixable.
+                When bookings depend too heavily on a few repeat agents and manual admin, growth can stall. Better positioning, repeatable marketing, and workflow systems are what unlock the next level.
               </p>
             </div>
           </div>
@@ -204,7 +202,7 @@ export default function InvisiblePhotographerPage() {
       <section className={`${styles.whiteBand} ${styles.sectionBand}`}>
         <div className="container">
           <h2 className={styles.sectionTitle}>Your growth roadmap</h2>
-          <p className={styles.sectionSub}>The exact progression from invisible → consistently booked.</p>
+          <p className={styles.sectionSub}>These are the next steps that turn a good photography business into a scalable one.</p>
 
           <div className={styles.roadmapGrid}>
             {roadmap.map((step, index) => (
@@ -221,12 +219,12 @@ export default function InvisiblePhotographerPage() {
       <section className={`${styles.lightBand} ${styles.sectionBand}`}>
         <div className="container">
           <div className={styles.insightBlock}>
-            <p className={styles.insightEyebrow}>⚠️ What most photographers get wrong</p>
+            <p className={styles.insightEyebrow}>⚠️ The shift that unlocks the next level</p>
             <p className={styles.insightText}>
-              They try to grow through Instagram posts, random Facebook ads, or hoping agents search Google.
+              Most photographers reach a point where working harder stops producing better results.
               <br />
               <br />
-              But the fastest way is directly connecting with agents listing homes. Once you have a list of agents and a simple outreach system, your business becomes predictable.
+              The next stage of growth comes from stronger positioning, better marketing systems, automation, and focusing on high-value clients. Once those systems are in place, your business becomes far more predictable and scalable.
             </p>
           </div>
         </div>
@@ -235,35 +233,39 @@ export default function InvisiblePhotographerPage() {
       <section className={`${styles.whiteBand} ${styles.sectionBand}`}>
         <div className="container">
           <div className={styles.ctaPrimaryCard}>
-            <h2>Want to fix this fast?</h2>
+            <h2>Ready to scale your photography business?</h2>
             <p>
-              I built a free community for real estate photographers where I share the exact systems used to grow photography businesses.
+              Inside my free community for real estate photographers, I share the exact systems photographers use to grow beyond inconsistent bookings and build sustainable businesses.
             </p>
 
             <div className={styles.ctaFeatureGrid}>
               <span className={styles.ctaFeature}>
                 <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
-                Find agents listing weekly
+                Local SEO strategies for photographers
               </span>
               <span className={styles.ctaFeature}>
                 <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
-                Outreach scripts that work
+                How to find agents listing homes every week
               </span>
               <span className={styles.ctaFeature}>
                 <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
-                Automation &amp; follow-ups
+                Outreach systems that generate new clients
               </span>
               <span className={styles.ctaFeature}>
                 <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
-                Local SEO &amp; marketing systems
+                Automation tools for follow-ups and marketing
+              </span>
+              <span className={styles.ctaFeature}>
+                <i className={`fas fa-check-circle ${styles.iconGreen}`} aria-hidden="true"></i>
+                Systems that make your business more predictable
               </span>
             </div>
 
             <Link href="/join" className="btn btn-cta-primary">
-              Join the Real Estate Photographer Community
+              Join the Photographer Community
             </Link>
 
-            <p className={styles.smallPrint}>Free to join • Step-by-step training • Photographer community</p>
+            <p className={styles.smallPrint}>Free to join • Marketing systems • Photographer community</p>
           </div>
         </div>
       </section>
@@ -271,12 +273,12 @@ export default function InvisiblePhotographerPage() {
       <section className={`${styles.whiteBand} ${styles.sectionBand}`}>
         <div className="container">
           <div className={styles.ctaSecondaryCard}>
-            <h2>Want the full system?</h2>
+            <h2>Move from growth to stability</h2>
             <p>
-              Inside the community you&apos;ll see how photographers build systems that bring consistent bookings — instead of relying on random referrals, slow seasons, or hoping agents find you.
+              Many photographers stay stuck in the growth stage for years. They have good clients, but their schedule still fluctuates. Once you build the right marketing systems, your business can move from unpredictable bookings, referrals, and inconsistent demand to a steady client pipeline and scalable growth.
             </p>
             <Link href="/join" className="btn btn-outline">
-              Join the Free Community
+              Join the Community
             </Link>
           </div>
         </div>
@@ -297,7 +299,7 @@ export default function InvisiblePhotographerPage() {
             <div className={styles.authorityCopy}>
               <h2>About the creator</h2>
               <p>
-                I&apos;m a real estate photographer and marketing automation specialist helping photographers build systems that consistently attract agent clients. Inside the community I share marketing systems, automation tools, outreach strategies, and SEO — all focused on one thing: <span className={styles.highlight}>getting more real estate photography bookings.</span>
+                I&apos;m a real estate photographer and marketing automation specialist helping photographers build systems that attract agent clients and create predictable bookings. Inside the community I share marketing automation systems, lead generation strategies, SEO strategies for photographers, and tools for scaling a photography business — all focused on helping photographers grow without burning out.
               </p>
             </div>
           </div>
@@ -306,7 +308,7 @@ export default function InvisiblePhotographerPage() {
 
       <section className={`${styles.whiteBand} ${styles.sectionBand}`}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>What photographers are learning inside</h2>
+          <h2 className={styles.sectionTitle}>What photographers are learning inside the community</h2>
 
           <div className={styles.socialGrid}>
             {learningItems.map((item) => (
@@ -319,7 +321,7 @@ export default function InvisiblePhotographerPage() {
 
           <p className={styles.socialFooter}>
             <i className={`fas fa-arrow-right ${styles.iconGreen}`} aria-hidden="true"></i>
-            <span>Join photographers already building predictable pipelines</span>
+            <span>These systems help photographers move from inconsistent growth to scalable businesses.</span>
           </p>
 
           <div className={styles.socialCta}>
@@ -332,4 +334,3 @@ export default function InvisiblePhotographerPage() {
     </main>
   );
 }
-

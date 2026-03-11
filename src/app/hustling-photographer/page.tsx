@@ -23,6 +23,21 @@ const roadmap = [
   },
 ];
 
+const actionPlan = [
+  {
+    title: "Increase your visibility with active real estate agents",
+    text: "Right now many agents in your market simply don’t know you exist yet. Your first priority should be identifying agents who are actively listing homes and introducing your services. Even a small list of active agents can quickly turn into consistent photography bookings.",
+  },
+  {
+    title: "Build a simple outreach system",
+    text: "Most photographers rely on random referrals or occasional inquiries. Instead, you want a simple system where you regularly connect with agents who are listing properties. This keeps your name in front of agents before they need a photographer.",
+  },
+  {
+    title: "Stay on the radar with follow-ups",
+    text: "Agents are busy. They often don’t respond right away — but they will remember the photographers who stay visible. Simple follow-up systems make sure agents remember you when their next listing needs photos.",
+  },
+];
+
 const learningItems = [
   {
     icon: "fas fa-users",
@@ -129,6 +144,38 @@ export default function HustlingPhotographerPage() {
             <p className={styles.relianceNote}>
               That usually looks like searching listings manually, messaging agents one by one, relying heavily on referrals, and posting on social media hoping agents see it. It works… but it&apos;s exhausting and inconsistent.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={`${styles.actionPlanBand} ${styles.sectionBand}`}>
+        <div className="container">
+          <div className={styles.actionPlanHeader}>
+            <span className={styles.actionPlanEyebrow}>Your next move</span>
+            <h2 className={styles.sectionTitle}>Your Personalized Action Plan</h2>
+            <p className={styles.sectionSub}>
+              Based on your quiz answers, the fastest way for you to grow your real estate photography business is to focus on these three priorities:
+            </p>
+          </div>
+
+          <div className={styles.actionPlanGrid}>
+            {actionPlan.map((item, index) => (
+              <div key={item.title} className={styles.actionPlanStep}>
+                <div className={styles.actionPlanNumber}>Priority {index + 1}</div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.actionPlanCta}>
+            <h3>Want help implementing this action plan?</h3>
+            <p>
+              Inside the Real Estate Photographer Community, I break down the exact systems photographers use to find agents listing homes, contact them effectively, automate follow-ups, and turn agents into long-term clients.
+            </p>
+            <Link href="/join" className="btn btn-outline">
+              Join the Free Community
+            </Link>
           </div>
         </div>
       </section>
