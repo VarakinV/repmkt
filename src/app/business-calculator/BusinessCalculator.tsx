@@ -273,7 +273,7 @@ export default function BusinessCalculator() {
             <p>
               Inside the community I show photographers the systems used to find agents, get bookings, and grow their photography business.
             </p>
-            <Link href="/join" className="btn btn-cta-primary">
+            <Link href="https://www.skool.com/repmkt/" className="btn btn-cta-primary">
               Join the Free Real Estate Photographer Community
             </Link>
           </div>
