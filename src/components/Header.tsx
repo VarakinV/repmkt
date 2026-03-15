@@ -38,7 +38,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <div className={styles.navLinks}>
           <Link href="/#how-it-works">How It Works</Link>
-          <Link href="/#free-tools">Free Tools</Link>
+          <Link href="/free-tools">Free Tools</Link>
           <Link href="/#community">Community</Link>
           <Link href="/#faq">FAQ</Link>
           <Link href="/join" className={`btn btn-outline ${styles.navBtn}`}>
@@ -61,7 +61,7 @@ export default function Header() {
         {/* Mobile Navigation Dropdown */}
         <div className={`${styles.mobileNav} ${isMenuOpen ? styles.mobileNavOpen : ""}`}>
           <Link href="/#how-it-works" onClick={closeMenu}>How It Works</Link>
-          <Link href="/#free-tools" onClick={closeMenu}>Free Tools</Link>
+          <Link href="/free-tools" onClick={closeMenu}>Free Tools</Link>
           <Link href="/#community" onClick={closeMenu}>Community</Link>
           <Link href="/#faq" onClick={closeMenu}>FAQ</Link>
           <Link href="/join" className={`btn btn-outline ${styles.navBtn}`} onClick={closeMenu}>

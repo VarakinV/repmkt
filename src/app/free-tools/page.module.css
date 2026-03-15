@@ -1,0 +1,219 @@
+.page {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
+}
+
+.hero {
+  position: relative;
+  padding: 5rem 0 2.5rem;
+  background: linear-gradient(135deg, var(--dark-charcoal) 0%, #1a1d21 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.hero :global(.container) {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  text-align: left;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 200, 83, 0.16);
+  color: var(--growth-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.subheadline {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.toolsSection,
+.moreSection {
+  padding: 2rem 0 2.5rem;
+}
+
+.communitySection {
+  padding: 5rem 0;
+  background: var(--electric-blue);
+  color: white;
+}
+
+.sectionTitle {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.toolCard,
+.moreCard {
+  background: white;
+  border: 1px solid var(--gray-light);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+.toolCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.toolIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 14px;
+  background: rgba(41, 98, 255, 0.1);
+  color: var(--electric-blue);
+  font-size: 1.4rem;
+}
+
+.toolCard h3,
+.moreCard h2,
+.communityContent h2 {
+  color: var(--text-dark);
+}
+
+.toolCard p,
+.moreCard p {
+  color: var(--text-gray);
+  line-height: 1.8;
+}
+
+.toolCard :global(.btn) {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.disabledButton {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.moreCard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.communityContent {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.communityContent h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.communityIntro,
+.listIntro,
+.smallPrint {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.communityIntro {
+  max-width: 760px;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.listIntro {
+  margin-bottom: 1rem;
+}
+
+.featureList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  line-height: 1.7;
+  text-align: left;
+}
+
+.featureItem i {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.featureItem span {
+  display: block;
+}
+
+.smallPrint {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .toolsGrid,
+  .featureList {
+    grid-template-columns: 1fr;
+  }
+
+  .toolCard,
+  .moreCard {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .communitySection {
+    padding: 3.5rem 0;
+  }
+
+  .toolCard :global(.btn) {
+    width: 100%;
+    text-align: center;
+  }
+}
