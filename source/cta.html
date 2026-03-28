@@ -1,0 +1,297 @@
+<style>
+  /* ===== LEADS SECTION ===== */
+  .leads-to-clients {
+    background: linear-gradient(145deg, #ffffff 0%, #fafcff 100%);
+    padding: 4rem 0;
+    border-top: 1px solid var(--gray-light, #e8ecf0);
+    border-bottom: 1px solid var(--gray-light, #e8ecf0);
+    margin: 2rem 0 0;
+  }
+
+  .leads-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-badge {
+    display: inline-block;
+    background: rgba(41, 98, 255, 0.12);
+    color: var(--electric-blue, #2962FF);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 1rem;
+    border-radius: 40px;
+    letter-spacing: 0.3px;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(41, 98, 255, 0.2);
+  }
+
+  .leads-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--dark-charcoal, #121417);
+    margin-bottom: 1rem;
+  }
+
+  .leads-subheadline {
+    font-size: 1.2rem;
+    color: #334155;
+    max-width: 800px;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+  }
+
+  .leads-subheadline strong {
+    color: var(--electric-blue, #2962FF);
+    font-weight: 700;
+  }
+
+  .demo-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f1f5f9;
+    padding: 0.4rem 1rem;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    color: #475569;
+    margin-top: 0.5rem;
+  }
+
+  .demo-note i {
+    color: var(--growth-green, #00C853);
+    font-size: 0.9rem;
+  }
+
+  /* Cards grid */
+  .leads-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 3rem 0 2.5rem;
+  }
+
+  .value-card {
+    flex: 1;
+    min-width: 220px;
+    background: white;
+    border-radius: 28px;
+    padding: 2rem 1.8rem;
+    text-align: center;
+    box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-light, #e8ecf0);
+    transition: all 0.25s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--electric-blue, #2962FF);
+    box-shadow: 0 24px 36px -16px rgba(41, 98, 255, 0.15);
+  }
+
+  .card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(41, 98, 255, 0.08) 0%, rgba(41, 98, 255, 0.02) 100%);
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: 0.2s;
+  }
+
+  .card-icon i {
+    font-size: 2.2rem;
+    color: var(--electric-blue, #2962FF);
+  }
+
+  .value-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--dark-charcoal, #121417);
+  }
+
+  .value-card p {
+    color: #475569;
+    line-height: 1.5;
+    font-size: 0.98rem;
+  }
+
+  /* promise row */
+  .promise-row {
+    background: #f0f9ff;
+    border-radius: 80px;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 2rem;
+    margin: 1rem auto 2rem;
+    width: fit-content;
+    max-width: 90%;
+    border: 1px solid rgba(41, 98, 255, 0.2);
+  }
+
+  .promise-row i {
+    font-size: 1.6rem;
+    color: var(--growth-green, #00C853);
+  }
+
+  .promise-row span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0f172a;
+  }
+
+  /* CTA area */
+  .leads-cta {
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 2.5rem 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--gray-light, #e8ecf0);
+  }
+
+  .cta-pretext {
+    font-size: 1.1rem;
+    color: #1e2a3e;
+    max-width: 780px;
+    margin: 0 auto 1.8rem auto;
+    line-height: 1.5;
+  }
+
+  .cta-pretext strong {
+    color: var(--electric-blue, #2962FF);
+  }
+
+  .btn-leads {
+    display: inline-block;
+    background: var(--electric-blue, #2962FF);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 1rem 2.8rem;
+    border-radius: 60px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px -8px rgba(41, 98, 255, 0.4);
+    transition: all 0.2s;
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  .btn-leads:hover {
+    background: #1a4fdb;
+    transform: scale(1.02);
+    box-shadow: 0 16px 28px -10px rgba(41, 98, 255, 0.5);
+  }
+
+  .cta-footnote {
+    font-size: 0.9rem;
+    color: #5b6e8c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-footnote i {
+    color: var(--growth-green, #00C853);
+    font-size: 1rem;
+  }
+
+  /* responsive */
+  @media (max-width: 768px) {
+    .leads-headline {
+      font-size: 2rem;
+    }
+    .leads-subheadline {
+      font-size: 1rem;
+    }
+    .value-card {
+      min-width: 100%;
+    }
+    .leads-cards {
+      flex-direction: column;
+    }
+    .promise-row span {
+      font-size: 0.95rem;
+    }
+    .btn-leads {
+      font-size: 1rem;
+      padding: 0.85rem 1.8rem;
+    }
+  }
+</style>
+
+<section class="leads-to-clients">
+  <div class="container leads-container">
+    <!-- Section Header -->
+    <div class="leads-header">
+      <span class="section-badge">THE NEXT STEP</span>
+      <h2 class="leads-headline">You Found the Agents.<br>Now What?</h2>
+      <p class="leads-subheadline">
+        Right now, you're looking at agents who are actively listing properties in your market.<br>
+        These are <strong>real opportunities</strong> — not random leads.
+      </p>
+      <div class="demo-note">
+        <i class="fas fa-info-circle"></i> This is just a demo.
+      </div>
+    </div>
+
+    <!-- Value Cards Row -->
+    <div class="leads-cards">
+      <div class="value-card">
+        <div class="card-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>Build the System</h3>
+        <p>Reach out to agents automatically — no manual cold calls, no spreadsheets.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="card-icon">
+          <i class="fas fa-comment-dots"></i>
+        </div>
+        <h3>Get Real Responses</h3>
+        <p>Messages that feel helpful, not spammy. Agents actually reply.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="card-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Turn Leads Into Clients</h3>
+        <p>From first booking to repeat work. Build long‑term relationships.</p>
+      </div>
+    </div>
+
+    <!-- Promise / trust row -->
+    <div class="promise-row">
+      <i class="fas fa-chart-line"></i>
+      <span>You already have the leads. Now it’s time to turn them into bookings.</span>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="leads-cta">
+      <p class="cta-pretext">
+        If you want to build a system that consistently brings you new clients (without chasing or guessing),<br>
+        that’s exactly what we focus on inside the <strong>free Skool community</strong> for real estate photographers.
+      </p>
+      <a href="#" class="btn-primary btn-leads">Join Free & Get The Full System →</a>
+      <p class="cta-footnote">
+        <i class="fas fa-users"></i> Join photographers already building their client pipeline
+      </p>
+    </div>
+  </div>
+</section>
+

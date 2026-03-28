@@ -1,0 +1,249 @@
+{
+  "Id": "29458682",
+  "Land": {
+    "SizeTotal": "Unknown"
+  },
+  "Tags": [
+    {
+      "Label": "14 min ago",
+      "HTMLColorCode": "#23A1C0",
+      "ListingTagTypeID": "1"
+    }
+  ],
+  "Media": [
+    {
+      "Order": 1,
+      "VideoType": "iGuide",
+      "Description": "VideoTourWebsite",
+      "MediaCategoryId": "2",
+      "MediaCategoryURL": "https://youriguide.com/0ebpo_2204_2781_chinook_winds_drive_southwest_airdrie_ab/"
+    },
+    {
+      "Description": "FloorPlan",
+      "MediaCategoryId": "8",
+      "MediaCategoryURL": "https://youriguide.com/0ebpo_2204_2781_chinook_winds_drive_southwest_airdrie_ab//doc/floorplan_metric_en_u.pdf"
+    },
+    {
+      "Description": "FloorPlan",
+      "MediaCategoryId": "8",
+      "MediaCategoryURL": "https://youriguide.com/0ebpo_2204_2781_chinook_winds_drive_southwest_airdrie_ab//doc/floorplan_imperial_en_u.pdf"
+    }
+  ],
+  "Building": {
+    "Type": "Row / Townhouse",
+    "Bedrooms": "2",
+    "SizeInterior": "876.33 sqft",
+    "StoriesTotal": "1",
+    "BathroomTotal": "2",
+    "HalfBathTotal": "0",
+    "FloorAreaMeasurements": [
+      {
+        "Area": "876 sqft",
+        "Type": "Square Footage",
+        "SortBy": "1",
+        "Source": "",
+        "TypeId": "1",
+        "SourceId": "0",
+        "MeasureUnitId": "1",
+        "AreaUnformatted": "876 sqft"
+      }
+    ]
+  },
+  "Business": {},
+  "Distance": "",
+  "Property": {
+    "Type": "Single Family",
+    "Photo": [
+      {
+        "TypeId": "0",
+        "LowResPath": "https://cdn.realtor.ca/listings/TS639088434340630000/reb9/lowres/5/A2292635_1.jpg",
+        "MedResPath": "https://cdn.realtor.ca/listings/TS639088434340630000/reb9/medres/5/A2292635_1.jpg",
+        "SequenceId": "1",
+        "HighResPath": "https://cdn.realtor.ca/listings/TS639088434340630000/reb9/highres/5/A2292635_1.jpg",
+        "LastUpdated": "2026-03-11 4:30:34 PM"
+      }
+    ],
+    "Price": "$289,000",
+    "TypeId": "300",
+    "Address": {
+      "Latitude": "51.2672024",
+      "Longitude": "-114.0323439",
+      "AddressText": "2204, 2781 Chinook Winds Drive SW|Airdrie, Alberta T4B3S5",
+      "PermitShowAddress": true
+    },
+    "ShortValue": "289K",
+    "OwnershipType": "Condominium/Strata",
+    "AmmenitiesNearBy": "Park, Schools, Shopping",
+    "OwnershipTypeGroupIds": [
+      2
+    ],
+    "PriceChangeTagDateUTC": "12:00:00 AM",
+    "PriceUnformattedValue": "289000",
+    "PriceChangeTimeOnRealtor": ""
+  },
+  "StatusId": "1",
+  "MlsNumber": "A2292635",
+  "Individual": [
+    {
+      "Name": "Donna Owens",
+      "Emails": [
+        {
+          "ContactId": "576510615"
+        }
+      ],
+      "Phones": [
+        {
+          "AreaCode": "403",
+          "PhoneType": "Telephone",
+          "PhoneNumber": "807-6546",
+          "PhoneTypeId": "1"
+        },
+        {
+          "AreaCode": "403",
+          "PhoneType": "Fax",
+          "PhoneNumber": "271-5909",
+          "PhoneTypeId": "4"
+        }
+      ],
+      "LastName": "Owens",
+      "Position": "Associate",
+      "Websites": [
+        {
+          "Website": "http://jamesowens.alberta.cirrealty.ca/",
+          "WebsiteTypeId": "1"
+        }
+      ],
+      "FirstName": "Donna",
+      "IndividualID": 2039930,
+      "Organization": {
+        "Logo": "https://cdn.realtor.ca/organization/en-CA/TS638967555000000000/lowres/1005095.jpg",
+        "Name": "CIR Realty",
+        "Emails": [
+          {
+            "ContactId": "576574860"
+          }
+        ],
+        "Phones": [
+          {
+            "AreaCode": "403",
+            "PhoneType": "Telephone",
+            "PhoneNumber": "271-0600",
+            "PhoneTypeId": "1"
+          },
+          {
+            "AreaCode": "403",
+            "PhoneType": "Fax",
+            "PhoneNumber": "271-5909",
+            "PhoneTypeId": "4"
+          }
+        ],
+        "Address": {
+          "AddressText": "130, 703 - 64 AVENUE SE|CALGARY, Alberta T2H2C3",
+          "PermitShowAddress": true
+        },
+        "HasEmail": true,
+        "OrganizationID": 54464,
+        "PhotoLastupdate": "2025-10-22 6:45:00 PM",
+        "OrganizationType": "Firm",
+        "RelativeDetailsURL": "/office/firm/54464/cir-realty-130-703-64-avenue-se-calgary-alberta-t2h2c3",
+        "PermitFreetextEmail": true,
+        "PermitShowListingLink": true
+      },
+      "RankMyAgentKey": "",
+      "RealSatisfiedKey": "",
+      "RelativeDetailsURL": "/agent/2039930/donna-owens-130-703-64-avenue-se-calgary-alberta-t2h2c3",
+      "TestimonialTreeKey": "",
+      "PermitFreetextEmail": true,
+      "PermitShowListingLink": true,
+      "CorporationDisplayTypeId": "0"
+    },
+    {
+      "Name": "James Owens",
+      "Emails": [
+        {
+          "ContactId": "576510609"
+        }
+      ],
+      "Phones": [
+        {
+          "AreaCode": "403",
+          "PhoneType": "Telephone",
+          "PhoneNumber": "998-8404",
+          "PhoneTypeId": "1"
+        },
+        {
+          "AreaCode": "403",
+          "PhoneType": "Fax",
+          "PhoneNumber": "271-5909",
+          "PhoneTypeId": "4"
+        }
+      ],
+      "LastName": "Owens",
+      "Position": "Associate",
+      "Websites": [
+        {
+          "Website": "http://jamesowens.alberta.cirrealty.ca/",
+          "WebsiteTypeId": "1"
+        }
+      ],
+      "FirstName": "James",
+      "IndividualID": 2039931,
+      "Organization": {
+        "Logo": "https://cdn.realtor.ca/organization/en-CA/TS638967555000000000/lowres/1005095.jpg",
+        "Name": "CIR Realty",
+        "Emails": [
+          {
+            "ContactId": "576574860"
+          }
+        ],
+        "Phones": [
+          {
+            "AreaCode": "403",
+            "PhoneType": "Telephone",
+            "PhoneNumber": "271-0600",
+            "PhoneTypeId": "1"
+          },
+          {
+            "AreaCode": "403",
+            "PhoneType": "Fax",
+            "PhoneNumber": "271-5909",
+            "PhoneTypeId": "4"
+          }
+        ],
+        "Address": {
+          "AddressText": "130, 703 - 64 AVENUE SE|CALGARY, Alberta T2H2C3",
+          "PermitShowAddress": true
+        },
+        "HasEmail": true,
+        "OrganizationID": 54464,
+        "PhotoLastupdate": "2025-10-22 6:45:00 PM",
+        "OrganizationType": "Firm",
+        "RelativeDetailsURL": "/office/firm/54464/cir-realty-130-703-64-avenue-se-calgary-alberta-t2h2c3",
+        "PermitFreetextEmail": true,
+        "PermitShowListingLink": true
+      },
+      "RankMyAgentKey": "",
+      "RealSatisfiedKey": "",
+      "RelativeDetailsURL": "/agent/2039931/james-owens-130-703-64-avenue-se-calgary-alberta-t2h2c3",
+      "TestimonialTreeKey": "",
+      "PermitFreetextEmail": true,
+      "PermitShowListingLink": true,
+      "CorporationDisplayTypeId": "0"
+    }
+  ],
+  "PostalCode": "T4B3S5",
+  "UploadedBy": 9,
+  "AlternateURL": {
+    "VideoLink": "https://youriguide.com/0ebpo_2204_2781_chinook_winds_drive_southwest_airdrie_ab/"
+  },
+  "ProvinceName": "Alberta",
+  "PublicRemarks": "Welcome to this bright and spacious 2 bedroom, 2 bathroom townhouse condo with vaulted ceilings in the living room and kitchen. The kitchen features granite countertops, pantry, quiet-close cabinetry, and a full appliance package including a fridge and dishwasher replaced in 2025. The primary bedroom includes a 4-piece ensuite, while the second bedroom and full bath offer great flexibility. In-suite laundry with stacked washer and dryer (new in 2025). Enjoy a south-facing balcony off the living room. Two portable air conditioning units are included for added comfort. Comes with two outdoor parking stalls — one titled and one assigned. (31751317)",
+  "RelativeURLEn": "/real-estate/29458682/2204-2781-chinook-winds-drive-sw-airdrie-prairie-springs",
+  "RelativeURLFr": "/immobilier/29458682/2204-2781-chinook-winds-drive-sw-airdrie",
+  "TimeOnRealtor": "14 min ago",
+  "InsertedDateUTC": "639088578340570000",
+  "HasNewImageUpdate": true,
+  "PhotoChangeDateUTC": "2026-03-11 8:30:34 PM",
+  "RelativeDetailsURL": "/real-estate/29458682/2204-2781-chinook-winds-drive-sw-airdrie-prairie-springs",
+  "HistoricalDataIsCleared": false
+}

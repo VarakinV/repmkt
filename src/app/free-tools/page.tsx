@@ -76,9 +76,9 @@ export default function FreeToolsPage() {
               <p>
                 This tool scans recent listings and helps you identify agents who may need a real estate photographer, so you always know who to contact next.
               </p>
-              <button type="button" className={`btn btn-outline ${styles.disabledButton}`} disabled>
-                Coming Soon
-              </button>
+              <Link href="/agent-finder" className="btn btn-primary">
+                Try the Agent Finder
+              </Link>
             </article>
           </div>
         </div>
