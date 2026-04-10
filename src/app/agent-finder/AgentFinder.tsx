@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 import HeroParticles from "@/components/HeroParticles";
 import styles from "./page.module.css";
@@ -168,6 +169,7 @@ function executeRecaptcha(siteKey: string, action: string): Promise<string> {
 }
 
 export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: string }) {
+  const router = useRouter();
   const [markets, setMarkets] = useState<AgentFinderMarketOption[]>([]);
   const [mode, setMode] = useState<"MARKET" | "CUSTOM_URL">("MARKET");
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -187,7 +189,6 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
   const [exportFirstName, setExportFirstName] = useState("");
   const [exportEmail, setExportEmail] = useState("");
   const [exporting, setExporting] = useState(false);
-  const [exportDone, setExportDone] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const progressMeta = getProgressMeta(job, loading);
   const videoInfo = INSTRUCTION_VIDEOS[countryCode] ?? INSTRUCTION_VIDEOS.US;
@@ -373,8 +374,7 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
       // Trigger direct download in browser
       triggerDownload(csv, filename);
       setShowExportGate(false);
-      setExportDone(true);
-      setTimeout(() => setExportDone(false), 3000);
+      router.push("/agent-finder/success");
     } catch {
       alert("Export failed. Please try again.");
     } finally {
@@ -528,7 +528,7 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
                   <h2>{job ? `Results for ${[job.city, job.regionCode].filter(Boolean).join(", ") || job.countryCode}` : previewLocation ? `Results for ${previewLocation}` : "Results"}</h2>
                   <p>{job ? `${job.leads.length} leads · ${providerLabels[job.provider]}` : "Live results will appear here as soon as leads start coming in."}</p>
                 </div>
-                {hasLeads && job ? <button className="btn btn-outline" onClick={() => { setExportDone(false); setShowExportGate(true); }}>Export CSV</button> : null}
+                {hasLeads && job ? <button className="btn btn-outline" onClick={() => setShowExportGate(true)}>Export CSV</button> : null}
               </div>
 
               {job?.status === "FAILED" ? <p className={styles.error}>{job.errorMessage}</p> : null}
@@ -684,16 +684,7 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
         </div>
       )}
 
-      {exportDone && (
-        <div className={styles.videoModal} onClick={() => setExportDone(false)}>
-          <div className={`${styles.videoModalContent} ${styles.exportConfirmation}`} onClick={(e) => e.stopPropagation()}>
-            <button type="button" className={styles.videoModalClose} onClick={() => setExportDone(false)} aria-label="Close">&times;</button>
-            <p className={styles.confirmLine}>✅ Download completed!</p>
-            <p className={styles.confirmLine}>📩 We also sent the file to your email.</p>
-            <p className={styles.confirmLine}>Thank you for using our tool!</p>
-          </div>
-        </div>
-      )}
+
     </main>
     </>
   );
