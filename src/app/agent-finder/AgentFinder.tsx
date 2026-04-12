@@ -238,6 +238,9 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
       setJob(payload);
       if (payload.status === "COMPLETED" || payload.status === "FAILED") {
         setLoading(false);
+        if (payload.status === "COMPLETED" && payload.leads.length > 0) {
+          setShowExportGate(true);
+        }
         return;
       }
 
@@ -528,7 +531,7 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
                   <h2>{job ? `Results for ${[job.city, job.regionCode].filter(Boolean).join(", ") || job.countryCode}` : previewLocation ? `Results for ${previewLocation}` : "Results"}</h2>
                   <p>{job ? `${job.leads.length} leads · ${providerLabels[job.provider]}` : "Live results will appear here as soon as leads start coming in."}</p>
                 </div>
-                {hasLeads && job ? <button className="btn btn-outline" onClick={() => setShowExportGate(true)}>Export CSV</button> : null}
+                {hasLeads && job && !showExportGate ? <button className="btn btn-outline" onClick={() => setShowExportGate(true)}>Export CSV</button> : null}
               </div>
 
               {job?.status === "FAILED" ? <p className={styles.error}>{job.errorMessage}</p> : null}
@@ -662,11 +665,10 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
       )}
 
       {showExportGate && (
-        <div className={styles.videoModal} onClick={() => setShowExportGate(false)}>
+        <div className={styles.videoModal}>
           <div className={styles.videoModalContent} onClick={(e) => e.stopPropagation()}>
-            <button type="button" className={styles.videoModalClose} onClick={() => setShowExportGate(false)} aria-label="Close">&times;</button>
-            <h3>Download Your Leads</h3>
-            <p className={styles.gateSubtext}>Enter your name and email to download the CSV file.</p>
+            <h3>Your {job?.city || "Agent"} Agent List is Ready</h3>
+            <p className={styles.gateSubtext}>Where should we send your results?</p>
             <div className={styles.gateForm}>
               <label className={styles.field}>
                 <span>First Name</span>
@@ -677,7 +679,7 @@ export default function AgentFinder({ recaptchaSiteKey }: { recaptchaSiteKey: st
                 <input type="email" value={exportEmail} onChange={(e) => setExportEmail(e.target.value)} placeholder="you@example.com" />
               </label>
               <button className="btn btn-primary" disabled={exporting || !exportFirstName.trim() || !exportEmail.trim()} onClick={handleExport}>
-                {exporting ? "Processing…" : "Download CSV"}
+                {exporting ? "Processing…" : "Send My List"}
               </button>
             </div>
           </div>
