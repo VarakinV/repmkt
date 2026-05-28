@@ -2,6 +2,7 @@
 
 import { useState, type ChangeEvent, type FocusEvent, type FormEvent } from "react";
 import Script from "next/script";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 
 type FormValues = {
@@ -82,6 +83,7 @@ function executeRecaptcha(siteKey: string, action: string): Promise<string> {
 }
 
 export default function SeoMdFileForm({ recaptchaSiteKey }: { recaptchaSiteKey: string }) {
+  const router = useRouter();
   const [values, setValues] = useState<FormValues>(emptyForm);
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -152,7 +154,8 @@ export default function SeoMdFileForm({ recaptchaSiteKey }: { recaptchaSiteKey: 
       setValues(emptyForm);
       setErrors({});
       setStatus("success");
-      setMessage("Thanks! Your request was received. Check your inbox for the file.");
+      setMessage("Thanks! Redirecting you to the next step...");
+      router.push("/seo-md-file/success");
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Something went wrong. Please try again.");
